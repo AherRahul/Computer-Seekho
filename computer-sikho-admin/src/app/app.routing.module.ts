@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CreateNewComponent } from './components/create-new/create-new.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { TablesComponent } from './components/tables/tables.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'create-new',
     component: CreateNewComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'tables',
+    component: TablesComponent,
     canActivate: [AuthGuard]
   }
 ]

@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   errorMessage: string;
+  userLoggedIn: any;
 
   constructor(
     private fb: FormBuilder,
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.init();
+    this.userLoggedIn = this.tokenService.GetToken();
   }
 
   init () {
@@ -42,7 +44,6 @@ export class LoginComponent implements OnInit {
       data => {
         this.tokenService.SetToken(data.token);
         this.loginForm.reset();
-        
         this.isLoggedIn.emit(true);
         this.router.navigate(['dashboard']);
       },

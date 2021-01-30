@@ -15,6 +15,7 @@ export class RegisterStaffComponent implements OnInit {
 
   registerForm: FormGroup;
   errorMessage: string;
+  successMessage: string;
   selectedRole: any;
   roleOptions = [
     {
@@ -29,7 +30,7 @@ export class RegisterStaffComponent implements OnInit {
       id: 3,
       display: 'Basic'
     }
-]
+  ];
 
   constructor(
     private fb: FormBuilder,
@@ -60,9 +61,11 @@ export class RegisterStaffComponent implements OnInit {
     this.authService.registerUser(this.registerForm.value).subscribe(
       data => {
         this.tokenService.SetToken(data.token);
-        this.registerForm.reset();
-
-        this.router.navigate(['dashboard']);
+        
+        setTimeout(() => {
+          this.successMessage = "User is successfully register..!!";
+          this.registerForm.reset();
+        }, 2000);
       },
       err => {
         if (err.error.message) {
@@ -74,6 +77,7 @@ export class RegisterStaffComponent implements OnInit {
 
   clearErrorMessage () {
     this.errorMessage = '';
+    this.successMessage = '';
   }
 
 }

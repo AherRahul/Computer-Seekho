@@ -1,3 +1,13 @@
+<div class="alert alert-dismissible alert-danger mt-2" *ngIf="errorMessage" style="width: 60%; margin-left: 20%;">
+  <button type="button" class="close" data-dismiss="alert" (click) = clearErrorMessage()>&times;</button>
+  <strong>Oh snap! </strong><span>{{errorMessage}}</span>
+</div>
+<div class="alert alert-dismissible alert-success mt-2" *ngIf="successMessage" style="width: 60%; margin-left: 20%;">
+  <button type="button" class="close" data-dismiss="alert" (click) = clearErrorMessage()>&times;</button>
+  <strong>Oh Great.!!! </strong><span>{{successMessage}}</span>
+</div>
+
+
 <div class="wrapper" style="height: 60vh;">
     <div class="main-panel">
       <!-- Navbar -->
@@ -63,7 +73,7 @@
                           <label class="bmd-label-floating">Select Role</label>
                           <select formControlName='role' class="form-control">
                             <option class="form-control" ></option>
-                            <option class="form-control" *ngFor="let r of roleOptions" value="r.id">{{r.display}}</option>
+                            <option class="form-control" *ngFor="let r of roleOptions" value={{r.id}}>{{r.display}}</option>
                          </select>`
                         </div>
                       </div>

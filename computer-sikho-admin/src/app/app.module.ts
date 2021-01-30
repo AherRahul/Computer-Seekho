@@ -19,6 +19,10 @@ import { CreateNewComponent } from './components/create-new/create-new.component
 import { CreateCourseComponent } from './components/create-course/create-course.component';
 import { CreateBatchComponent } from './components/create-batch/create-batch.component';
 import { ChangeBannerComponent } from './components/change-banner/change-banner.component';
+import { TablesComponent } from './components/tables/tables.component';
+import { StaffTablesComponent } from './components/staff-tables/staff-tables.component';
+import { CourseTablesComponent } from './components/course-tables/course-tables.component';
+import { BatchTablesComponent } from './components/batch-tables/batch-tables.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { ChangeBannerComponent } from './components/change-banner/change-banner.
     CreateNewComponent,
     CreateCourseComponent,
     CreateBatchComponent,
-    ChangeBannerComponent
+    ChangeBannerComponent,
+    TablesComponent,
+    StaffTablesComponent,
+    CourseTablesComponent,
+    BatchTablesComponent
   ],
   imports: [
     BrowserModule,
