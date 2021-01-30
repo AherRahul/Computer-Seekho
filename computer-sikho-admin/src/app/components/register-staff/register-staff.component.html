@@ -1,0 +1,102 @@
+<div class="wrapper" style="height: 60vh;">
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:;">User Profile</a>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content" style="min-height: 60vh !important;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8" style="border: 3px solid #f9f9f9; padding: 1rem;">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Register User</h4>
+                  <p class="card-category">Your limitation - it's only your imagination.</p>
+                </div>
+                <div class="card-body pb-5">
+                  <form [formGroup]="registerForm" novalidate (ngSubmit)="registerStaff()">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Fist Name</label>
+                          <input type="text" class="form-control" aria-label="First Name" formControlName="firstName" autocomplete="off" >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Last Name</label>
+                          <input type="text" class="form-control" aria-label="Last Name" formControlName="lastName" autocomplete="off" >
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">Email address</label>
+                              <input type="email" class="form-control" aria-label="Email Address" formControlName="email" autocomplete="off" >
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Password</label>
+                            <input type="password" class="form-control" aria-label="Password" formControlName="password" autocomplete="off" >
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Company (disabled)</label>
+                          <input type="text" class="form-control" value="Computer Sikho" disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <!-- <ng-select [items]="roleOptions" bindLabel="display" bindValue='id' placeholder="Select Role" formControlName='role' ></ng-select> -->
+                          <label class="bmd-label-floating">Select Role</label>
+                          <select formControlName='role' class="form-control">
+                            <option class="form-control" ></option>
+                            <option class="form-control" *ngFor="let r of roleOptions" value="r.id">{{r.display}}</option>
+                         </select>`
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 40%;">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a>
+                    <img class="img" src="../../../assets/images/savita-thakur.PNG" style="width: 120% !important;" />
+                  </a>
+                </div>
+                <div class="card-body pb-4">
+                  <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                  <h4 class="card-title">Savita Thakur</h4>
+                  <p class="card-description">
+                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  </p>
+                  <div class="logo text-center pb-4">
+                    <a routerLink="" data-ol-has-click-handler="">
+                      <img src="../../../assets/images/logo/vita_logo.png" alt="Vita Logo" width="50%">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+@import '../../../assets/css/material-dashboard.css';
+@import '../../../assets/demo/demo.css';
+
+.dropdown-toggle,
+.dropdown-item {
+    cursor: pointer;
+}
+
+.user-img {
+    max-height: 50px;
+    border: 2px solid white;
+    border-radius: 25px;
+    display: inline;
+}

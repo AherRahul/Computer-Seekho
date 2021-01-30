@@ -1,0 +1,65 @@
+<div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg" *ngIf="isLoggedIn()" >
+  <div class="logo text-center">
+    <a routerLink="" data-ol-has-click-handler="">
+      <img src="../../../assets/images/logo/vita_logo.png" alt="Vita Logo" width="50%">
+    </a>
+  </div>
+  <div class="sidebar-wrapper" >
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="dashboard">
+          <i class="material-icons">dashboard</i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="create-new">
+          <i class="material-icons">person</i>
+          <p>Create New</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="courses">
+          <i class="material-icons">content_paste</i>
+          <p>Table List</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="./typography.html">
+          <i class="material-icons">library_books</i>
+          <p>Typography</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="./icons.html">
+          <i class="material-icons">bubble_chart</i>
+          <p>Icons</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="./map.html">
+          <i class="material-icons">location_ons</i>
+          <p>Maps</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="./notifications.html">
+          <i class="material-icons">notifications</i>
+          <p>Notifications</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="./rtl.html">
+          <i class="material-icons">language</i>
+          <p>RTL Support</p>
+        </a>
+      </li>
+      <li class="nav-item active-pro " (click)='userLoggedOut()'>
+        <a class="nav-link" routerLink="">
+          <i class="material-icons">power_settings_new</i>
+          <p>Logout</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
